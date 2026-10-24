@@ -1,0 +1,4 @@
+import Link from "next/link";
+import { PlatformShell,platformStyles as styles } from "@/components/platform/PlatformShell";
+
+export default function OfflinePage(){return <PlatformShell eyebrow="Connection status" title="You appear to be offline" description="Live routes, map tiles, official warnings and AI answers require a network connection."><div className={styles.card}><div className={styles.status}><span className={styles.statusDot}/><div><h2>Live safety information is unavailable</h2><p>Previously opened browser content may still appear, but it must not be treated as current. Reconnect and refresh before checking warnings or planning travel.</p></div></div><div className={styles.actions}><Link className={styles.button} href="/dashboard">Try dashboard again</Link></div></div></PlatformShell>}
